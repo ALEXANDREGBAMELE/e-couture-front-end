@@ -22,19 +22,19 @@ export class NavbarComponent implements OnInit {
               items: [
                   {
                       label: 'HOMME',
-                      routerLink: "/h",
+                      routerLink: "/",
 
                   },
                   {
                       label: 'FEMME',
-                      routerLink: "/f"
+                      routerLink: "/"
                   },
 
               ]
           },
           {
             label: 'BIENTOT DISPONIBLE',
-            routerLink : "/detail",
+            routerLink : "/",
           },
 
           {
@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit {
 
         {
           label: '',
-          icon: 'pi pi-fw pi-shopping-bag',
+          icon: 'pi pi-fw pi-bell',
         },
       ];
   }

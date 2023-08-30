@@ -5,7 +5,7 @@
   </div>
   <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5" [(activeIndex)]="activeIndex">
     <ng-template pTemplate="item" let-item>
-      <img [src]="item.itemImageSrc" style="width: 100%; height: 600px;" />
+      <a routerLink="/detail"><img [src]="item.itemImageSrc" style="width: 100%; height: 600px;" /></a>
     </ng-template>
     <ng-template pTemplate="thumbnail" let-item>
       <div class="grid grid-nogutter justify-content-center">

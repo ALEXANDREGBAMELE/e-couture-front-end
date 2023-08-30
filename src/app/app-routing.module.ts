@@ -7,6 +7,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import {UtilisateursComponent} from "./admin/pages/utilisateurs/utilisateurs.component";
+import { TousArticlesComponent } from './pages/tous-articles/tous-articles.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'utilisateur',
     component : UtilisateursComponent
+  },
+  {
+    path : "articles",
+    component : TousArticlesComponent
   },
   {
     path:'',

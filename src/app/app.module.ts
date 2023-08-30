@@ -36,6 +36,10 @@ import {TreeTableModule} from "primeng/treetable";
 import {ToastModule} from "primeng/toast";
 import {ContextMenuModule} from "primeng/contextmenu";
 import {MultiSelectModule} from "primeng/multiselect";
+import { TousArticlesComponent } from './pages/tous-articles/tous-articles.component';
+import { ProcessComponent } from './components/process/process.component';
+import { TendanceComponent } from './components/tendance/tendance.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +55,9 @@ import {MultiSelectModule} from "primeng/multiselect";
     InscriptionComponent,
     UtilisateursComponent,
     ProduitsComponent,
+    TousArticlesComponent,
+    ProcessComponent,
+    TendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +82,7 @@ import {MultiSelectModule} from "primeng/multiselect";
     ToastModule,
     ContextMenuModule,
     MultiSelectModule,
+   
   ],
   providers: [ProduitService],
   bootstrap: [AppComponent],

@@ -1,0 +1,13 @@
+<div class="container">
+    </div>
+    <div class="field grid">
+      <div class="col-4 md:col-4 mt-5" *ngFor="let index of [1, 2, 3,4,5,6,7,8,9]">
+        <ng-container *ngTemplateOutlet="galleryTemplate"></ng-container>
+      </div>
+  </div>
+  
+  
+  
+  <ng-template #galleryTemplate>
+    <app-galery></app-galery>
+  </ng-template>
