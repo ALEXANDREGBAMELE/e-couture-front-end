@@ -1,0 +1,14 @@
+.baniere{
+  height: 100vh;
+background-image: url("../../../assets/img/coup-moyen-femme-noire-qui-dirige-petite-entreprise.jpg");
+/*  background-color: chocolate;*/
+ background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.baniere .banier-over-texte{
+  color: #fff;
+  font-size: xx-large;
+  padding-top: 500px;
+}

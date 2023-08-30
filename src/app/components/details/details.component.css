@@ -1,0 +1,55 @@
+img{
+  height: 405px;
+  width: 420px;
+  margin: 3px;
+}
+.prix-article{
+  border: solid 2px black;
+  text-align: center;
+}
+.precomander{
+  border: solid 2px black;
+  text-align: center;
+}
+
+.item{
+  height: 20px;
+  width: 20px;
+  border-radius:50% ;
+  border: 2px solid gray;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.rouge{ background-color: red;}
+.bleu{ background-color: blue;}
+.noir{ background-color: black;}
+.gris{ background-color: grey;}
+.maron{ background-color: rosybrown;}
+
+.text{
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.left{
+  overflow: auto;
+  height: 700px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.left::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.left {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
