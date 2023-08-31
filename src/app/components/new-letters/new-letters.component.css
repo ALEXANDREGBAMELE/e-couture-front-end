@@ -1,0 +1,16 @@
+.text-align{
+    text-align: center;
+    background-color: rgb(50, 50, 96);
+}
+#mail{
+    height: 40px;
+    width: 300px;
+}
+#envoie{
+    height:40px;
+    width: 150px;
+    margin-left: 15px;
+    color: rgb(50, 50, 96);
+    font-size: 24px;
+    font-weight: bold;
+}

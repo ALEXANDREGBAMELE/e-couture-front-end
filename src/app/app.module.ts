@@ -39,6 +39,10 @@ import {MultiSelectModule} from "primeng/multiselect";
 import { TousArticlesComponent } from './pages/tous-articles/tous-articles.component';
 import { ProcessComponent } from './components/process/process.component';
 import { TendanceComponent } from './components/tendance/tendance.component';
+import { TimelineModule } from 'primeng/timeline';
+import { NewLettersComponent } from './components/new-letters/new-letters.component';
+import { AtelierPageComponent } from './pages/atelier-page/atelier-page.component';
+import { AtelierComponent } from './components/atelier/atelier.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +62,9 @@ import { TendanceComponent } from './components/tendance/tendance.component';
     TousArticlesComponent,
     ProcessComponent,
     TendanceComponent,
+    NewLettersComponent,
+    AtelierPageComponent,
+    AtelierComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,6 +89,7 @@ import { TendanceComponent } from './components/tendance/tendance.component';
     ToastModule,
     ContextMenuModule,
     MultiSelectModule,
+    TimelineModule,
    
   ],
   providers: [ProduitService],

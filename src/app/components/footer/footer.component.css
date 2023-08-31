@@ -1,7 +1,18 @@
-.footer{
-  background-color: rgba(31, 31, 31, 0.84);
-  color: white;
-  max-height: 500px;
-  height: 300px;
+.footer {
+  background-color: rgba(189, 188, 188, 0.84);
+  color: rgb(0, 0, 0);
+  /* max-height: 500px; */
+  /* height: 300px; */
   font-size: 20px;
+}
+
+.pi {
+  font-size: 50px;
+
+}
+
+.pi-paypal {
+  font-size: 50px;
+  color: rgb(47, 47, 78);
+
 }

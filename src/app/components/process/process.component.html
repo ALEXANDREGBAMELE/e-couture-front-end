@@ -1,17 +1,26 @@
-<div class="process-container">
-    <div class="icon">
-        <div class="item">Etape 1</div>
-        <div class="item">Etape 2</div>
-        <div class="item">Etape 3</div>
-        <div class="item">Etape 4</div>
+<div class="process-container flex gap-8">
+    <div class="text-align">
+        <div class="item mb-5">Etape 1</div>
+        <div class="item-text mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
     </div>
-    <hr>
-    <div class="texte">
-
-        <div class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
-        <div class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
-        <div class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
-        <div class="item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
-
+    <div class="text-align">
+        <div class="item mb-5">Etape 1</div>
+        <div class="item-text mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
     </div>
+    <div class="text-align">
+        <div class="item mb-5">Etape 1</div>
+        <div class="item-text mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
+    </div>
+    <div class="text-align">
+        <div class="item mb-5">Etape 1</div>
+        <div class="item-text mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui maiores</div>
+    </div>
+</div>
+
+<div class="card flex flex-column gap-4 rond-alignement">
+    <p-timeline [value]="events" layout="horizontal" align="top">
+        <ng-template pTemplate="content" let-event>
+            {{ event }}
+        </ng-template>
+    </p-timeline>  
 </div>
