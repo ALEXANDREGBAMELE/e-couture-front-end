@@ -43,6 +43,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { NewLettersComponent } from './components/new-letters/new-letters.component';
 import { AtelierPageComponent } from './pages/atelier-page/atelier-page.component';
 import { AtelierComponent } from './components/atelier/atelier.component';
+import { AproposComponent } from './pages/apropos/apropos.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { AtelierComponent } from './components/atelier/atelier.component';
     NewLettersComponent,
     AtelierPageComponent,
     AtelierComponent,
+    AproposComponent,
   ],
   imports: [
     BrowserModule,

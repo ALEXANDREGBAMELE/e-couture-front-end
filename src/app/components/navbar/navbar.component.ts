@@ -45,6 +45,7 @@ export class NavbarComponent implements OnInit {
           {
             label: 'A PROPOS',
             // icon: 'pi pi-fw pi-power-off'
+            routerLink:'/apropos'
           },
 
         {
