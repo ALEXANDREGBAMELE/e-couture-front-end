@@ -33,8 +33,8 @@ export class NavbarComponent implements OnInit {
               ]
           },
           {
-            label: 'BIENTOT DISPONIBLE',
-            routerLink : "/",
+            label: 'BOUTIQUE',
+            routerLink : "/boutique",
           },
 
           {
