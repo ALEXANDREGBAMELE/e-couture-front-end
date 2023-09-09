@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TousArticlesComponent } from './tous-articles.component';
+import { ListeArticlesComponent } from './liste-articles.component';
 
 describe('TousArticlesComponent', () => {
-  let component: TousArticlesComponent;
-  let fixture: ComponentFixture<TousArticlesComponent>;
+  let component: ListeArticlesComponent;
+  let fixture: ComponentFixture<ListeArticlesComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TousArticlesComponent]
+      declarations: [ListeArticlesComponent]
     });
-    fixture = TestBed.createComponent(TousArticlesComponent);
+    fixture = TestBed.createComponent(ListeArticlesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

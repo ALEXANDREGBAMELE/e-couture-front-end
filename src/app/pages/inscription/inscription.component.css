@@ -1,0 +1,26 @@
+.container{
+    height: 100%;
+    width: 100%;
+   
+    
+}
+.left{
+    
+    margin: 1%;
+    width: 50%;
+    height: calc(100vh - 10vh);
+    /* z-index: 1; */
+    background-image: url("https://www.educatel.fr/wp-content/uploads/2021/04/metier-couturier-2.jpg");
+    background-size: cover;
+}
+.right{
+   
+    margin: 1%;
+    width: 50%;
+    height: calc(100vh - 10vh);
+}
+
+.margin{
+    margin-top: 8%;
+    margin-left: 5%;
+}

@@ -26,17 +26,15 @@ import {DividerModule} from "primeng/divider";
 import { FooterComponent } from './components/footer/footer.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
-import { UtilisateursComponent } from './admin/pages/utilisateurs/utilisateurs.component';
-import { ProduitsComponent } from './admin/pages/produits/produits.component';
 import {ProduitService} from "./shared/services/produit.service";
 import {TableModule} from "primeng/table";
 import {RatingModule} from 'primeng/rating';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TreeTableModule} from "primeng/treetable";
 import {ToastModule} from "primeng/toast";
 import {ContextMenuModule} from "primeng/contextmenu";
 import {MultiSelectModule} from "primeng/multiselect";
-import { TousArticlesComponent } from './pages/tous-articles/tous-articles.component';
+import { ListeArticlesComponent } from './pages/liste-articles/liste-articles.component';
 import { ProcessComponent } from './components/process/process.component';
 import { TendanceComponent } from './components/tendance/tendance.component';
 import { TimelineModule } from 'primeng/timeline';
@@ -44,6 +42,8 @@ import { NewLettersComponent } from './components/new-letters/new-letters.compon
 import { AtelierPageComponent } from './pages/atelier-page/atelier-page.component';
 import { AtelierComponent } from './components/atelier/atelier.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -58,15 +58,15 @@ import { AproposComponent } from './pages/apropos/apropos.component';
     FooterComponent,
     PagenotfoundComponent,
     InscriptionComponent,
-    UtilisateursComponent,
-    ProduitsComponent,
-    TousArticlesComponent,
+    ListeArticlesComponent,
     ProcessComponent,
     TendanceComponent,
     NewLettersComponent,
     AtelierPageComponent,
     AtelierComponent,
     AproposComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -92,12 +92,13 @@ import { AproposComponent } from './pages/apropos/apropos.component';
     ContextMenuModule,
     MultiSelectModule,
     TimelineModule,
+    ReactiveFormsModule,
+    HttpClientModule,
    
   ],
   providers: [ProduitService],
   bootstrap: [AppComponent],
   exports: [
-    UtilisateursComponent
   ]
 })
 export class AppModule { }

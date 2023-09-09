@@ -51,9 +51,25 @@ export class NavbarComponent implements OnInit {
         {
           label: '',
           icon: 'pi pi-fw pi-user',
-            command: () => {
-              this.openPopup();
-            }
+            // command: () => {
+            //   this.openPopup();
+            // }
+            items: [
+              {
+                  label: 'SE CONNECTER',
+                  routerLink: "/login",
+
+              },
+              {
+                  label: 'S\'INSCRIRE',
+                  routerLink: "/register"
+              },
+              {
+                label: 'SE DECONNECTER',
+                routerLink: "/"
+            },
+
+          ]
         },
 
         {

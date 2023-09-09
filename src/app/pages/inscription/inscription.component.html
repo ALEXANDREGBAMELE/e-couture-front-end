@@ -1,38 +1,49 @@
+<div class="container">
+  <div class="flex">
+    <div class="left">
+      <!-- la patie de gauche ici -->
+    </div>
 
- <div class="card flex justify-content-center">
-    <p-dialog header="Header" [style]="{ width: '50vw' }">
-        <ng-template pTemplate="header">
-          <div class="titre align-content-between">
-            <span class="text-xl font-bold">{{titre}}</span>
-          </div>
-        </ng-template>
+    <div class="right justify-content-center align-items-center margin">
+      <div class="title mb-5"><h1>S'INSCRIRE</h1></div>
+      <form [formGroup]="inscription" (ngSubmit)="enregistrer()">
+      <div class="flex gap-8">
+        <div class="field">
+          <label for="nom">Nom : </label><br>
+          <input pInputText  type="text" formControlName="nom" />
+        </div>
 
-      <div class="card">
-        <div class="grid">
-          <div class="col-8 flex align-items-center justify-content-center">
-            <div class="p-fluid">
-              <div class="field">
-                <label for="username">Username</label>
-                <input pInputText id="username" type="text" />
-              </div>
-              <div class="field">
-                <label for="password">Password</label>
-                <input pInputText id="password" type="password" />
-              </div>
-              <p-button label="Login"></p-button>
-            </div>
-          </div>
-          <div class="col-5 flex align-items-center justify-content-center">
-            <p-button label="Sign Up" icon="pi pi-user-plus" styleClass="p-button-success"></p-button>
-          </div>
+        <div class="field">
+          <label for="prenom">Prenom : </label><br>
+          <input pInputText  type="text" formControlName="prenom" />
         </div>
       </div>
-    </p-dialog>
-</div> 
 
+      <div class="flex gap-8">
+        <div class="field">
+          <label for="telephone">Telephone : </label><br>
+          <input pInputText  type="text" formControlName="telephone"/>
+        </div>
 
-
-<h1>
-    hello world !
-</h1>
-
+        <div class="field">
+          <label for="mail">Mail</label><br>
+          <input pInputText  type="email" formControlName="mail" />
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <div class="field">
+          <label for="password">Mot de passe : </label><br>
+          <input pInputText  type="password" formControlName="password" />
+        </div>
+        <div class="field">
+          <label for="passwordConfirm">Confirmation de Mot de passe : </label><br>
+          <input pInputText  type="password" formControlName="passwordConfirm"/>
+        </div>
+      </div>
+      <div class="field">     
+        <button pButton type="submit" icon="pi pi-check" iconPos="left" label="Enregistrer"></button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
