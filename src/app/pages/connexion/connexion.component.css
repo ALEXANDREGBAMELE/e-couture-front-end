@@ -18,4 +18,10 @@
     margin: 1%;
     width: 50%;
     height: calc(100vh - 10vh);
+    /* background-color: aliceblue; */
+    padding-left: 10%;
+}
+.margin{
+    margin-top: 8%;
+    margin-left: 5%;
 }

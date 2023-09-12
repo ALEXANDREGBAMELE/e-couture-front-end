@@ -1,4 +1,17 @@
-img{
-    height: 100%;
-    width: 800px;
+
+
+.right{
+    height: 100vh;
+    width: 48%;
+    background-image: url("https://img.freepik.com/photos-premium/jeune-femme-africaine-couturiere-coud-vetements-machine-coudre-utilise-ciseaux-au-bureau-tailleur-couturiere-noire-femme_151355-6448.jpg");
+    background-size: cover;
+    background-position: right;
+    
+}
+.left{
+    height: 100vh;
+    width: 52%;
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
 }

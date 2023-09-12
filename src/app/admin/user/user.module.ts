@@ -6,6 +6,8 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { UserDelComponent } from './user-del/user-del.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserIndexComponent } from './user-index/user-index.component';
+import { UserListeComponent } from './user-liste/user-liste.component';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { UserIndexComponent } from './user-index/user-index.component';
     UserAddComponent,
     UserDelComponent,
     UserEditComponent,
-    UserIndexComponent
+    UserIndexComponent,
+    UserListeComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    TableModule
   ]
 })
 export class UserModule { }
