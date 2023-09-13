@@ -1,25 +1,20 @@
 <div class="container">
     <h1>Qui se charge de la confection de vos vêtements ?</h1>
     <div class="card">
-        <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false"
+        <p-carousel [value]="articles" [numVisible]="3" [numScroll]="3" [circular]="false"
             [responsiveOptions]="responsiveOptions">
-            <ng-template let-product pTemplate="item">
+            <ng-template let-article pTemplate="item">
                 <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
                     <div class="mb-3">
                         <a routerLink="/articles">
-                            <img src="{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+                            <img src={{article.imgUrl}} [alt]="article.libelle" class="w-6 shadow-2" />
                         </a>
                     </div>
                     <div>
-                        <h4 class="mb-1">{{ product.name }}</h4>
-                        <!-- <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6> -->
-                        <!-- <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag> -->
-                        <!-- <div class="car-buttons mt-5">
-                            <p-button type="button" styleClass="p-button p-button-rounded mr-2"
-                                icon="pi pi-search"></p-button>
-                            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2"
-                                icon="pi pi-star-fill"></p-button>
-                        </div> -->
+                        <h4 class="mb-1">{{ article.libelle }}</h4>
+                        <h4 class="mb-1">{{ article.rating }}</h4>
+                        <h4 class="mb-1">{{ article.prix }}</h4>
+                        <h4 class="mb-1">{{ article.description }}</h4>
                     </div>
                 </div>
             </ng-template>

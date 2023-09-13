@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Produit } from 'src/app/shared/data/produit';
 import { ProductService } from 'src/app/shared/services/productservice';
+import { ArticleService } from 'src/app/shared/services/article.service';
+import { Article } from 'src/app/shared/models/article';
 @Component({
   selector: 'app-atelier',
   templateUrl: './atelier.component.html',
@@ -10,13 +12,20 @@ export class AtelierComponent implements OnInit {
   // products: Product[] | undefined;
   products: Produit[] | any;
   responsiveOptions: any[] | undefined;
-
-  constructor(private productService: ProductService) { }
+  articles : Article[] | any;
+  constructor(private productService: ProductService, private articleService : ArticleService) { }
 
   ngOnInit() {
     this.productService.getProductsSmall().then((products) => {
       this.products = products;
     });
+
+    this.articleService.getAllArticle().subscribe((resul) => {
+      console.log()
+      this.articles = resul as Article
+      
+      console.log(this.articles)
+    })
 
     this.responsiveOptions = [
       {
@@ -47,5 +56,7 @@ export class AtelierComponent implements OnInit {
   //       return 'danger';
   //   }
   // }
+
+
 }
 

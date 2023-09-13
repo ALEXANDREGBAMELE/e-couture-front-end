@@ -6,22 +6,28 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { UserDelComponent } from './user-del/user-del.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserIndexComponent } from './user-index/user-index.component';
-import { UserListeComponent } from './user-liste/user-liste.component';
 import { TableModule } from 'primeng/table';
-
-
+import { ButtonModule } from 'primeng/button';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ArticleRoutingModule } from '../article/article-routing.module';
 @NgModule({
   declarations: [
     UserAddComponent,
     UserDelComponent,
     UserEditComponent,
-    UserIndexComponent,
-    UserListeComponent
+    UserIndexComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    TableModule
-  ]
+    TableModule,
+    ButtonModule,
+    ConfirmPopupModule,
+    ConfirmDialogModule,
+    ButtonModule,
+    ArticleRoutingModule,
+  ],
+ 
 })
 export class UserModule { }

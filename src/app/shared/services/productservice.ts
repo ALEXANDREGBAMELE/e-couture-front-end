@@ -21,7 +21,7 @@ export class ProductService {
                 code: 'nvklal433',
                 name: 'Black Watch',
                 description: 'Product Description',
-                image: '../../assets/img/atelier-courture.png',
+                image: "https://www.cdiscount.com/pdt2/8/0/4/1/700x700/MP03070804/rw/chemise-homme-rouge-unie.jpg",
                 price: 72,
                 category: 'Accessories',
                 quantity: 61,

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { MenubarModule } from 'primeng/menubar';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
-import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -43,7 +42,8 @@ import { AtelierPageComponent } from './pages/atelier-page/atelier-page.componen
 import { AtelierComponent } from './components/atelier/atelier.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SharedModule } from './shared/shared.module';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -99,6 +99,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [ProduitService],
   bootstrap: [AppComponent],
   exports: [
+    SharedModule
   ]
 })
 export class AppModule { }

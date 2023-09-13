@@ -1,15 +1,13 @@
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Injectable } from "@angular/core";
 import { environment } from "../../../environments/environment.dev";
 
 @Injectable({
-  providedIn : 'root'
+  providedIn: 'root'
 })
-export class HttpService {
+export class ApiService {
 
-  constructor(private http : HttpClient) {
-
-  }
+  constructor(private http : HttpClient) { }
 
   get(endpoint : string ) {
     ///console.log(`${environment.BASE_URL}${endpoint}`);
@@ -40,3 +38,4 @@ export class HttpService {
   }
 
 }
+

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UserIndexComponent } from './user-index.component';
 
 describe('UserIndexComponent', () => {
