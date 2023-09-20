@@ -56,18 +56,22 @@ export class NavbarComponent implements OnInit {
             // }
             items: [
               {
-                  label: 'SE CONNECTER',
+                  label: 'CONNEXION',
                   routerLink: "/login",
 
               },
               {
-                  label: 'S\'INSCRIRE',
+                  label: 'INSCRIPTION',
                   routerLink: "/register"
               },
               {
-                label: 'SE DECONNECTER',
+                label: 'PROFILE',
                 routerLink: "/"
-            },
+              },
+              {
+                label: 'DECONNEXION',
+                routerLink: "/"
+              }
 
           ]
         },

@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AppModule } from 'src/app/app.module';
+
+
 import { Product } from 'src/app/shared/data/articles';
 import { ProductService } from 'src/app/shared/services/productservice';
 import { User } from 'src/app/shared/models/user';
 import { UserService } from 'src/app/shared/services/user.service';
+import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-user-index',
   templateUrl: './user-index.component.html',
@@ -10,15 +15,16 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 
 export class UserIndexComponent implements OnInit{
-  user!: User[] | any;
+  users!: User[] | any;
 
   constructor(private userService : UserService) {}
-
+  form! : FormGroup  
   ngOnInit() {
       this.userService.getAllUsers().subscribe((data) => {
-          this.user = data;
+          this.users = data;
           console.log(data)
       });
+
   }
   
 

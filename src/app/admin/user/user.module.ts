@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ArticleRoutingModule } from '../article/article-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     UserAddComponent,
@@ -27,6 +28,7 @@ import { ArticleRoutingModule } from '../article/article-routing.module';
     ConfirmDialogModule,
     ButtonModule,
     ArticleRoutingModule,
+    ReactiveFormsModule,
   ],
  
 })

@@ -21,9 +21,7 @@ export class AtelierComponent implements OnInit {
     });
 
     this.articleService.getAllArticle().subscribe((resul) => {
-      console.log()
       this.articles = resul as Article
-      
       console.log(this.articles)
     })
 
