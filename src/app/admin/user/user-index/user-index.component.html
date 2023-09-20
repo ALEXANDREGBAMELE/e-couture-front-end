@@ -90,7 +90,7 @@
             <td>{{user.prenom}}</td>
             <td>{{user.mail}}</td>
             <td>{{user.telephone}}</td>
-            <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3"></p-button>
+            <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3" [routerLink]="'edit/'+user.userId"></p-button>
             <p-button icon="pi pi-trash" styleClass="p-button-danger" (onClick)="deleteUser(user)"></p-button>
         </tr>
     </ng-template>
