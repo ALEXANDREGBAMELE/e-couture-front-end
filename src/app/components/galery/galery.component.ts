@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PhotoService} from "../../shared/services/photo.service";
+import { Article } from 'src/app/shared/models/article';
+import { ArticleService } from 'src/app/shared/services/article.service';
 
 @Component({
   selector: 'app-galery',
@@ -8,6 +10,7 @@ import {PhotoService} from "../../shared/services/photo.service";
 })
 export class GaleryComponent implements OnInit{
   images: any[] | undefined;
+  articles : Article[] | any;
 
   get activeIndex(): number {
     return this._activeIndex;
@@ -34,10 +37,16 @@ export class GaleryComponent implements OnInit{
       numVisible: 1
     }
   ];
-  constructor(private photoService: PhotoService) {}
+  constructor(private photoService: PhotoService, private articleService : ArticleService) {}
   ngOnInit() {
     this.photoService.getImages().then((images) => (this.images = images));
+    
+    this.articleService.getAllArticle().subscribe((data) =>{
+      this.articles = data as Article;
+    })
   }
+
+ 
 
   next() {
     this.activeIndex++;
@@ -46,5 +55,7 @@ export class GaleryComponent implements OnInit{
   prev() {
     this.activeIndex--;
   }
+
+
 
 }

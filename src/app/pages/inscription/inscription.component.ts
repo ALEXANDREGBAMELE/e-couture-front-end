@@ -35,11 +35,13 @@ export class InscriptionComponent implements OnInit {
     // Traitement réussi
     this.users = data;
     console.log(data)
+    alert("succes")
     this.inscriptionForm.reset()
 
   },
   (error) => {
     // Gestion des erreurs
+    alert("erreur")
     console.error('Une erreur s\'est produite lors de la création de l\'utilisateur : ', error);
     // Vous pouvez afficher un message d'erreur à l'utilisateur ici
   }

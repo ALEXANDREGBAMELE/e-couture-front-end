@@ -1,5 +1,5 @@
 export interface User{
-    user_id? : number;
+    userId? : number;
     nom? : string;
     prenom? : number;
     telephone? : string;

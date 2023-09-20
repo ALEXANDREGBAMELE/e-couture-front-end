@@ -7,9 +7,9 @@
     <ng-template pTemplate="item" let-item>
       <a routerLink="/detail"><img [src]="item.itemImageSrc" style="width: 100%; height: 600px;" /></a>
     </ng-template>
-    <ng-template pTemplate="thumbnail" let-item>
+    <ng-template pTemplate="thumbnail" let-article>
       <div class="grid grid-nogutter justify-content-center">
-        <img [src]="item.thumbnailImageSrc" style="height: 100px;"/>
+        <img [src]="article.thumbnailImageSrc" style="height: 100px;"/>
       </div>
     </ng-template>
   </p-galleria>

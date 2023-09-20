@@ -30,7 +30,8 @@ export class UserService {
   }
 
  
-   deleteArticle(user_id : any) {
-     return this.httpService.delete(`/user/dele${user_id}`);
+   deleteUser(user_id : any) {
+     return this.httpService.delete(`/user/delete/${user_id}`);
    }
+  
 }

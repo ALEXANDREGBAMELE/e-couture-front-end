@@ -14,18 +14,35 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./user-index.component.css']
 })
 
-export class UserIndexComponent implements OnInit{
+export class UserIndexComponent implements OnInit {
   users!: User[] | any;
+  user !: User
 
-  constructor(private userService : UserService) {}
-  form! : FormGroup  
+  constructor(private userService: UserService) { }
+  form!: FormGroup
+
   ngOnInit() {
-      this.userService.getAllUsers().subscribe((data) => {
-          this.users = data;
-          console.log(data)
-      });
+
+    this.getAllUsers();
 
   }
-  
 
+  getAllUsers() {
+    this.userService.getAllUsers().subscribe((data) => {
+      this.users = data as User;
+      console.log(this.users[1].userId)
+
+    });
+  }
+
+  deleteUser(user: User) {
+    this.userService.deleteUser(user.userId).subscribe((resl) => {
+      console.log("Utilisateur supprimé avec succès");
+      // Après la suppression, actualisez la liste en excluant l'utilisateur supprimé
+      location.reload
+    },
+      (error) => {
+        console.error("Erreur lors de la suppression de l'utilisateur :", error);
+      })
+  }
 }

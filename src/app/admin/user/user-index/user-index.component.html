@@ -1,4 +1,4 @@
- <div class="card flex">
+ <!-- <div class="card flex">
     <div class="card flex justify-content-start m-4">
         <p-button label="Ajouter" class="mr-2"><i class="pi pi-plus"
                 style="font-size: 1rem"></i></p-button>
@@ -26,6 +26,7 @@
                 <th style="width: 3rem">
                     <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                 </th>
+                <th pSortableColumn="id_user">Id <p-sortIcon field="id_user"></p-sortIcon></th>
                 <th pSortableColumn="nom">Name <p-sortIcon field="nom"></p-sortIcon></th>
                 <th pSortableColumn="prenom">Prenom <p-sortIcon field="prenom"></p-sortIcon></th>
                 <th class="px-2">	Âge  <p-columnFilter type="numeric" field="age" display="menu"></p-columnFilter></th>
@@ -33,14 +34,15 @@
                 <th>Action</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-user>
-            <tr>
+        <ng-template pTemplate="item" let-user >
+            <tr class="bg-900">
                 <td>
                     <p-tableCheckbox [value]="user"></p-tableCheckbox>
                 </td>
+                <td style="height: 20px;" >{{user.userId}}</td>
                 <td>{{user.nom}}</td>
                 <td>{{user.prenom}}</td>
-                <td><b>{{user.age}}</b> (ans)</td>
+                <td>{{user.age}}</td>
                 <td>{{user.departement?.designation}}</td>
                 <td>
                     <div class="card flex justify-content-center">
@@ -67,56 +69,31 @@
 
 <div>
     
-</div>
-<!-- 
-<div class="card flex">
-    <div class="card flex justify-content-start m-4">
-        <button label="" class="mr-2"><i class="pi pi-plus"
-                style="font-size: 1rem">Ajouter Etudiant</i></button>
-    </div>
-</div>
+</div> -->
 
 
-<div>
-    <table>
-        <thead>
+<p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
             <th>Id</th>
             <th>Nom</th>
             <th>Prenom</th>
             <th>Mail</th>
             <th>Tel</th>
             <th colspan="2">Actions</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of users">
-                <td>{{user.id}}</td>
-                <td>KouKa</td>
-                <td>Kq Kou</td>
-                <td>kouka@gmail.com</td>
-                <td>0101010</td>
-                <td><button>Modifier</button></td>
-                <td><button>Supprimer</button></td>
-            </tr>
-            <tr>
-                <td>01</td>
-                <td>KouKa</td>
-                <td>Kq Kou</td>
-                <td>kouka@gmail.com</td>
-                <td>0101010</td>
-                <td><button>Modifier</button></td>
-                <td><button>Supprimer</button></td>
-            </tr>
-            <tr>
-                <td>01</td>
-                <td>KouKa</td>
-                <td>Kq Kou</td>
-                <td>kouka@gmail.com</td>
-                <td>0101010</td>
-                <td><button>Modifier</button></td>
-                <td><button>Supprimer</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td><b>{{user.userId}}</b></td>
+            <td>{{user.nom}}</td>
+            <td>{{user.prenom}}</td>
+            <td>{{user.mail}}</td>
+            <td>{{user.telephone}}</td>
+            <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3"></p-button>
+            <p-button icon="pi pi-trash" styleClass="p-button-danger" (onClick)="deleteUser(user)"></p-button>
+        </tr>
+    </ng-template>
+</p-table>
 
 

@@ -3,6 +3,8 @@ import { Produit } from 'src/app/shared/data/produit';
 import { ProductService } from 'src/app/shared/services/productservice';
 import { ArticleService } from 'src/app/shared/services/article.service';
 import { Article } from 'src/app/shared/models/article';
+import { Atelier } from 'src/app/shared/models/atelier';
+import { AtelierService } from 'src/app/shared/services/atelier.service';
 @Component({
   selector: 'app-atelier',
   templateUrl: './atelier.component.html',
@@ -10,19 +12,15 @@ import { Article } from 'src/app/shared/models/article';
 })
 export class AtelierComponent implements OnInit {
   // products: Product[] | undefined;
-  products: Produit[] | any;
   responsiveOptions: any[] | undefined;
-  articles : Article[] | any;
-  constructor(private productService: ProductService, private articleService : ArticleService) { }
+  ateliers : Atelier[] | any;
+  constructor( private atelierService : AtelierService) { }
 
   ngOnInit() {
-    this.productService.getProductsSmall().then((products) => {
-      this.products = products;
-    });
 
-    this.articleService.getAllArticle().subscribe((resul) => {
-      this.articles = resul as Article
-      console.log(this.articles)
+    this.atelierService.getAllAtelier().subscribe((resul) => {
+      this.ateliers = resul as Atelier
+      console.log(resul)
     })
 
     this.responsiveOptions = [
@@ -43,18 +41,6 @@ export class AtelierComponent implements OnInit {
       }
     ];
   }
-
-  // getSeverity(status: string) {
-  //   switch (status) {
-  //     case 'INSTOCK':
-  //       return 'success';
-  //     case 'LOWSTOCK':
-  //       return 'warning';
-  //     case 'OUTOFSTOCK':
-  //       return 'danger';
-  //   }
-  // }
-
 
 }
 
