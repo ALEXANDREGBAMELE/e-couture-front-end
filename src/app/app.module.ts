@@ -44,6 +44,7 @@ import { AproposComponent } from './pages/apropos/apropos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { ButtonModule } from 'primeng/button';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ButtonModule } from 'primeng/button';
     AtelierPageComponent,
     AtelierComponent,
     AproposComponent,
+    IndexComponent,
     
 
   ],

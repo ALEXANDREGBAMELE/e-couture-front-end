@@ -9,48 +9,51 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
 import { ListeArticlesComponent } from './pages/liste-articles/liste-articles.component';
 import { AtelierPageComponent } from './pages/atelier-page/atelier-page.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
+import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
+
   {
-    path: 'connexion',
-    component: ConnexionComponent
+    path : 'index',
+    component : IndexComponent,
+    children : [
+        {
+          path: '',
+          component: AccueilComponent
+        },
+        {
+          path: "connexion",
+          component: ConnexionComponent
+        },
+        {
+          path: 'inscription',
+          component: InscriptionComponent
+        },
+        {
+          path: 'modeles',
+          component: ModeleArticleComponent
+        },
+        {
+          path: 'detail',
+          component: DetailsComponent
+        },
+        
+       
+        {
+          path: "articles",
+          component: ListeArticlesComponent
+        },
+        {
+          path: "boutique",
+          component: AtelierPageComponent
+        },
+        {
+          path: "apropos",
+          component: AproposComponent
+        },
+    ]
   },
-  {
-    path: 'modeles',
-    component: ModeleArticleComponent
-  },
-  {
-    path: 'detail',
-    component: DetailsComponent
-  },
-  {
-    path: 'accueil',
-    component: AccueilComponent
-  },
-  {
-    path: 'inscription',
-    component: InscriptionComponent
-  },
-  {
-    path: "articles",
-    component: ListeArticlesComponent
-  },
-  {
-    path: "boutique",
-    component: AtelierPageComponent
-  },
-  {
-    path: "apropos",
-    component: AproposComponent
-  },
-  {
-    path: "login",
-    component: ConnexionComponent
-  },
-  {
-    path: "register",
-    component: InscriptionComponent
-  },
+  
   {
     path: '',
     redirectTo: '/accueil',

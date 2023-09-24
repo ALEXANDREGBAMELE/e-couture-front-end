@@ -1,5 +1,29 @@
-<div>
-    <div class="side-bar"></div>
-    <div class="right-content">
+
+
+<div class="flex container">
+    <div class="side-bar">
+        <ul>
+            <li><a routerLink="/admin/user">Gestion Utilisateur</a></li>
+            
+        </ul>
     </div>
-</div>
+    <div class="right-content">
+        <div class="navbar-dashboard"></div>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> 
+
+<!-- sidebar.component.html
+ <p-sidebar [(visible)]="sidebarVisible" [showCloseIcon]="true" [blockScroll]="true">
+    <h2>Ma Sidebar</h2>
+    <ul>
+      <li><a routerLink="/accueil">Accueil</a></li>
+      <li><a routerLink="/profil">Profil</a></li>
+      <li><a routerLink="/parametres">Paramètres</a></li>
+    </ul>
+  </p-sidebar> 
+  
+  <button (click)="toggleSidebar()">Toggle Sidebar</button>-->
+  

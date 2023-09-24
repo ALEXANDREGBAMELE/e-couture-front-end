@@ -6,7 +6,7 @@ import { AdminComponent } from './admin.component';
 import { TableModule } from 'primeng/table';
 import { UserModule } from './user/user.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { SidebarModule } from 'primeng/sidebar';
 @NgModule({
   declarations: [
     AdminComponent,
@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TableModule,
     UserModule,
     ReactiveFormsModule,
+    SidebarModule,
   ]
 })
 export class AdminModule { }

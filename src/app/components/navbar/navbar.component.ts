@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
           },
           {
             label: 'BOUTIQUE',
-            routerLink : "/boutique",
+            routerLink : "/index/boutique",
           },
 
           {
@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
           {
             label: 'A PROPOS',
             // icon: 'pi pi-fw pi-power-off'
-            routerLink:'/apropos'
+            routerLink:'/index/apropos'
           },
 
         {
@@ -57,12 +57,12 @@ export class NavbarComponent implements OnInit {
             items: [
               {
                   label: 'CONNEXION',
-                  routerLink: "/login",
+                  routerLink: "/index/connexion",
 
               },
               {
                   label: 'INSCRIPTION',
-                  routerLink: "/register"
+                  routerLink: "/index/inscription"
               },
               {
                 label: 'PROFILE',
@@ -80,6 +80,11 @@ export class NavbarComponent implements OnInit {
           label: '',
           icon: 'pi pi-fw pi-bell',
         },
+        {
+          label : '',
+          icon: 'pi pi-search',
+          style: { fontSize: '50' }
+        }
       ];
   }
 

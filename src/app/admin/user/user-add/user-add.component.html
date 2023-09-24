@@ -1,15 +1,26 @@
-<div>
-    <form>
-        <label for="nom">Nom : </label><br>
-        <input type="text" name="nom" id=""><br>
+<p-card [style]="{ width: '500px' }" header="Enregistrement utilisateur" class="m-5">
+    <form [formGroup]="inscriptionForm" (ngSubmit)="enregistrer()">
+        <div class="flex flex-column gap-2">
+            <label htmlFor="nom">Nom : </label>
+            <input class="p-inputtext-lg" pInputText id="nom" [style]="{height:'40px'}" formControlName="nom">
 
-        <label for="prenom">Prenom : </label><br>
-        <input type="text" name="prenom" id=""><br>
+            <label htmlFor="prenom">Prenom : </label>
+            <input pInputText id="prenom" [style]="{height:'40px'}" formControlName="prenom" />
 
-        <label for="mail">E-mail : </label><br>
-        <input type="text" name="mail" id=""><br>
 
-        <label for="telephone">Telephone : </label><br>
-        <input type="text" name="telephone" id=""><br>
+            <label htmlFor="telephone">Telephone : </label>
+            <p-inputMask mask="99-99-99-99-99" placeholder="01-02-03-04-05" [style]="{height:'40px'}" formControlName="telephone"></p-inputMask>
+
+            <label htmlFor="mail">E-mail : </label>
+            <input pInputText [pKeyFilter]="blockSpace" [style]="{height:'40px'}" formControlName="mail"/>
+
+
+            <label htmlFor="password">Mot de passe : </label>
+            <p-password  [style]="{height:'40px'}" [feedback]="false" formControlName="password"></p-password>
+
+            <div class="card flex justify-content-center">
+                <button pButton type="submit" icon="pi pi-check" iconPos="left" label="Enregistrer"></button>
+            </div>
+        </div>
     </form>
-</div>
+</p-card>

@@ -25,8 +25,12 @@
                 <th pSortableColumn="id_user">Id</th>
                 <th pSortableColumn="nom">Name <p-sortIcon field="nom"></p-sortIcon></th>
                 <th pSortableColumn="prenom">Prenom <p-sortIcon field="prenom"></p-sortIcon></th>
-                <th class="px-2"> Mail <p-columnFilter type="numeric" field="age" display="menu"></p-columnFilter></th>
-                <th pSortableColumn="departement">Telephone<p-sortIcon field="departement"></p-sortIcon></th>
+                <th pSortableColumn="telephone"> Mail <p-sortIcon field="mai"></p-sortIcon></th>
+                <th pSortableColumn="telephone">Telephone <p-sortIcon field="telephone"></p-sortIcon></th>
+                <th pSortableColumn="ville">Ville <p-sortIcon field="ville"></p-sortIcon></th>
+                <th pSortableColumn="date_naissance">Date de naissance <p-sortIcon field="date_naissance"></p-sortIcon></th>
+                <th pSortableColumn="adresse">Adresse <p-sortIcon field="adresse"></p-sortIcon></th>
+                <th pSortableColumn="code_postal">Code postal <p-sortIcon field="code_postal"></p-sortIcon></th>
 
                 <th colspan="2">Actions</th>
             </tr>
@@ -39,6 +43,10 @@
                 <td>{{user.prenom}}</td>
                 <td>{{user.mail}}</td>
                 <td>{{user.telephone}}</td>
+                <td>{{user.ville}}</td>
+                <td>{{user.dateNaissance}}</td>
+                <td>{{user.adresse}}</td>
+                <td>{{user.codePostal}}</td>
                 <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3"
                     [routerLink]="'edit/'+user.userId"></p-button>
                 <p-button icon="pi pi-trash" styleClass="p-button-danger" (onClick)="deleteUser(user)"></p-button>

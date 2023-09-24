@@ -12,6 +12,11 @@ import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ArticleRoutingModule } from '../article/article-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardModule } from 'primeng/card';
+import { PasswordModule } from 'primeng/password';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
+import { KeyFilterModule } from 'primeng/keyfilter';
 @NgModule({
   declarations: [
     UserAddComponent,
@@ -29,6 +34,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     ArticleRoutingModule,
     ReactiveFormsModule,
+    CardModule,
+    PasswordModule,
+    InputNumberModule,
+    InputMaskModule,
+    KeyFilterModule,
   ],
  
 })
