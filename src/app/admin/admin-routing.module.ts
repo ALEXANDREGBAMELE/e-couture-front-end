@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 const routes: Routes = [
 
@@ -12,13 +13,14 @@ const routes: Routes = [
         path: 'user',
         loadChildren: () => import('./user/user.module').then(m => m.UserModule)
       },
+      {
+        path: 'article',
+        loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
+      },
     ]
   },
   
-  {
-    path: 'article',
-    loadChildren: () => import('./article/article-routing.module').then(m => m.ArticleRoutingModule)
-  },
+  
   {
     path: 'atelier',
     loadChildren: () => import('./atelier/atelier-routing.module').then(m => m.AtelierRoutingModule)
@@ -27,6 +29,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [
+    RouterModule,
+    
+  ]
 })
 export class AdminRoutingModule { }

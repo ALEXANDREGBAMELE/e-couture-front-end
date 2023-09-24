@@ -17,6 +17,9 @@ import { PasswordModule } from 'primeng/password';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { KeyFilterModule } from 'primeng/keyfilter';
+import { ToolbarModule } from 'primeng/toolbar';
+import { SplitButtonModule } from 'primeng/splitbutton';
+
 @NgModule({
   declarations: [
     UserAddComponent,
@@ -35,10 +38,12 @@ import { KeyFilterModule } from 'primeng/keyfilter';
     ArticleRoutingModule,
     ReactiveFormsModule,
     CardModule,
+    SplitButtonModule,
     PasswordModule,
     InputNumberModule,
     InputMaskModule,
     KeyFilterModule,
+    ToolbarModule ,
   ],
  
 })

@@ -1,35 +1,67 @@
-<table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>description</th>
-        <th>prix</th>
-        <th>rating</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <!-- <ng-template let-article pTemplate="item">
-          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-              <td class="mb-3">
-                  <a routerLink="/articles">
-                      <img src={{article.imgUrl}} [alt]="article.libelle" class="w-6 shadow-2" />
-                  </a>
-                </td>
-             
-                  <td class="mb-1">{{ article.libelle }}</td>
-                  <td class="mb-1">{{ article.rating }}</td>
-                  <td class="mb-1">{{ article.prix }}</td>
-                  <td class="mb-1">{{ article.description }}</td>
-
+<div class="card flex">
+  <div class="card">
+      <p-toolbar>
+          <div class="p-toolbar-group-start">
+              <p-button [routerLink]="'/admin/article/add'" label="New" icon="pi pi-plus" class="mr-2"></p-button>
+              <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
+              <i class="p-toolbar-separator pi pi-bars mr-2" style="vertical-align: middle"></i>
+              <p-splitButton label="Save" icon="pi pi-check" [model]="items" styleClass="p-button-warning"></p-splitButton>
           </div>
-      </ng-template> -->
-      <td>{{articles.libelle}}</td>
-      <td>Bonjou</td>
-      <td>Bonjou</td>
-      <td>Bonjou</td>
-      <td>Bonjou</td>
-    </tr>
-    </tbody>
-  </table>
+          <div class="p-toolbar-group-end">
+              <p-button icon="pi pi-search" class="mr-2"></p-button>
+              <p-button icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
+              <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+          </div>
+      </p-toolbar>
+  </div>
+</div>
+
+<div class="card">
+  <p-table #dt [value]="articles" [tableStyle]="{ 'min-width': '50rem' }" [rows]="10" [paginator]="true"
+      [globalFilterFields]="['nom','prenom','mai','telephone']" selectionMode="single" [(selection)]="articles">
+
+      <ng-template pTemplate="caption">
+          <div class="p-d-flex p-ai-center p-jc-between">
+              <h3 class="p-m-0">Tableau Des Articles</h3>
+              <span class="p-input-icon-left">
+                  <i class="pi pi-search"></i>
+                  <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                      placeholder="Search..." />
+              </span>
+          </div>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+          <tr>
+              <th pSortableColumn="id_user">Id</th>
+              <th pSortableColumn="id_user">Image</th>
+              <th pSortableColumn="nom">Libelle <p-sortIcon field="nom"></p-sortIcon></th>
+              <th pSortableColumn="prenom">Description <p-sortIcon field="prenom"></p-sortIcon></th>
+              <th pSortableColumn="prenom">couleur <p-sortIcon field="prenom"></p-sortIcon></th>
+              <th pSortableColumn="telephone"> Categorie <p-sortIcon field="mai"></p-sortIcon></th>
+              <th pSortableColumn="telephone">Prix <p-sortIcon field="telephone"></p-sortIcon></th>
+              <th pSortableColumn="ville">Date <p-sortIcon field="ville"></p-sortIcon></th>
+              <th pSortableColumn="date_naissance">Rating <p-sortIcon field="date_naissance"></p-sortIcon></th>
+
+              <th colspan="2">Actions</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-article>
+
+          <tr>
+              <td><b>{{article.userId}}</b></td>
+              <td>{{article.nom}}</td>
+              <td>{{article.prenom}}</td>
+              <td>{{article.mail}}</td>
+              <td>{{article.telephone}}</td>
+              <td>{{article.ville}}</td>
+              <td>{{article.dateNaissance}}</td>
+              <td>{{article.adresse}}</td>
+              <td>{{article.codePostal}}</td>
+              <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3"
+                  [routerLink]="'edit/'+article.userId"></p-button>
+              <p-button icon="pi pi-trash" styleClass="p-button-danger" (onClick)="deleleArticle(article)"></p-button>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>

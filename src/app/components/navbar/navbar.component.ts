@@ -78,7 +78,9 @@ export class NavbarComponent implements OnInit {
 
         {
           label: '',
-          icon: 'pi pi-fw pi-bell',
+          icon: 'pi pi-bell',
+          style : { fontSize: '20px' },
+          
         },
         {
           label : '',
