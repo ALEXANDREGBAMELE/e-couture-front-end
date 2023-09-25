@@ -5,7 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CardsComponent } from './cards/cards.component';
 import { CardModule } from 'primeng/card';
 import { GrapheComponent } from './graphe/graphe.component';
-// import { ChartModule } from 'primeng/chart';
+import { ChartModule } from 'primeng/chart';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { GrapheComponent } from './graphe/graphe.component';
     CommonModule,
     DashboardRoutingModule,
     CardModule,
-    // ChartModule,
+    ChartModule,
   ]
 })
 export class DashboardModule { }
