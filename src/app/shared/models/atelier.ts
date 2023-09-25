@@ -1,8 +1,8 @@
 export interface Atelier{
     atelierId? : number;
-    nom? : string;
+    nomAtelier? : string;
     adresse? : string;
-    description? : string;
+    descriptionAtelier? : string;
     ville? : string;
     codePostal? : string;
     image? : string;

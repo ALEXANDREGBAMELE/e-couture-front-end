@@ -38,10 +38,11 @@
               <th pSortableColumn="nom">Libelle <p-sortIcon field="nom"></p-sortIcon></th>
               <th pSortableColumn="prenom">Description <p-sortIcon field="prenom"></p-sortIcon></th>
               <th pSortableColumn="prenom">couleur <p-sortIcon field="prenom"></p-sortIcon></th>
-              <th pSortableColumn="telephone"> Categorie <p-sortIcon field="mai"></p-sortIcon></th>
-              <th pSortableColumn="telephone">Prix <p-sortIcon field="telephone"></p-sortIcon></th>
-              <th pSortableColumn="ville">Date <p-sortIcon field="ville"></p-sortIcon></th>
-              <th pSortableColumn="date_naissance">Rating <p-sortIcon field="date_naissance"></p-sortIcon></th>
+              <th pSortableColumn="categorie"> Categorie <p-sortIcon field="mai"></p-sortIcon></th>
+              <th pSortableColumn="prix">Prix <p-sortIcon field="telephone"></p-sortIcon></th>
+              <th pSortableColumn="quantite">Quantité <p-sortIcon field="telephone"></p-sortIcon></th>
+              <th pSortableColumn="date">Date <p-sortIcon field="ville"></p-sortIcon></th>
+              <th pSortableColumn="rating">Rating <p-sortIcon field="date_naissance"></p-sortIcon></th>
 
               <th colspan="2">Actions</th>
           </tr>
@@ -49,15 +50,16 @@
       <ng-template pTemplate="body" let-article>
 
           <tr>
-              <td><b>{{article.userId}}</b></td>
-              <td>{{article.nom}}</td>
-              <td>{{article.prenom}}</td>
-              <td>{{article.mail}}</td>
-              <td>{{article.telephone}}</td>
-              <td>{{article.ville}}</td>
-              <td>{{article.dateNaissance}}</td>
-              <td>{{article.adresse}}</td>
-              <td>{{article.codePostal}}</td>
+              <td><b>{{article.articleId}}</b></td>
+              <td><img [src]="article.imgUrl" alt="image article" height="50"></td>
+              <td>{{article.libelle}}</td>
+              <td>{{article.description}}</td>
+              <td>{{article.couleur}}</td>
+              <td>{{article.categorie}}</td>
+              <td>{{article.prix}}</td>
+              <td>{{article.quantite}}</td>
+              <td>{{article.date}}</td>
+              <td>{{article.rating}}</td>
               <p-button icon="pi pi-pencil" styleClass="p-button-primary" class="mr-3"
                   [routerLink]="'edit/'+article.userId"></p-button>
               <p-button icon="pi pi-trash" styleClass="p-button-danger" (onClick)="deleleArticle(article)"></p-button>

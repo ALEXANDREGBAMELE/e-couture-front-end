@@ -19,6 +19,7 @@ export class AdminComponent implements OnInit {
             {
                 label: 'Tableau de bord',
                 icon: 'pi  pi-chart-bar',
+                routerLink : '/admin/dashboard'
 
             },
            
@@ -71,6 +72,11 @@ export class AdminComponent implements OnInit {
                     }
                 ]
 
+            },
+            {
+                label: 'Atelier',
+                icon: 'pi pi-fw pi-eject',
+                routerLink : '/admin/atelier'
             },
             {
                 label: 'Evenements',

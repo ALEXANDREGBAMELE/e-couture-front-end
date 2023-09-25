@@ -1,0 +1,11 @@
+<div *ngFor="let user of users">
+   
+        <p-card
+            [style]="{'width':'150px', height:'150px', paddingTop:'15px', textAlign:'center', float:'left', margin:'5px'}"
+            [ngStyle]="user.style" class="card">
+            <div style="font-size: larger; font-weight:bold">{{ user.count }}</div>
+            <div>
+                <h4>{{ user.label }}</h4>
+            </div>
+    </p-card>
+</div>

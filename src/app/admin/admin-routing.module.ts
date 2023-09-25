@@ -17,13 +17,15 @@ const routes: Routes = [
         path: 'article',
         loadChildren: () => import('./article/article.module').then(m => m.ArticleModule)
       },
+      {
+        path: 'atelier',
+        loadChildren: () => import('./atelier/atelier.module').then(m => m.AtelierModule)
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
     ]
-  },
-  
-  
-  {
-    path: 'atelier',
-    loadChildren: () => import('./atelier/atelier-routing.module').then(m => m.AtelierRoutingModule)
   },
 ];
 

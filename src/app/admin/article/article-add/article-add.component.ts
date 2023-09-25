@@ -15,13 +15,13 @@ export class ArticleAddComponent implements OnInit {
 
 
   constructor(private fb: FormBuilder, private articleService: ArticleService) { }
-  inscriptionForm!: FormGroup;
+  enregistrerForm!: FormGroup;
 
   titre: string = "ISCRIPTION";
   artices: Article = {}
   ngOnInit(): void {
 
-    this.inscriptionForm = this.fb.group({
+    this.enregistrerForm = this.fb.group({
       libelle: ["", [Validators.required]],
       description: ["", [Validators.required]],
       couleur: ["", [Validators.required]],
@@ -33,13 +33,13 @@ export class ArticleAddComponent implements OnInit {
   }
 
   enregistrer() {
-    this.articleService.createArticle(this.inscriptionForm.value).subscribe(
+    this.articleService.createArticle(this.enregistrerForm.value).subscribe(
       (data: Article) => {
         // Traitement réussi
         this.artices = data;
         console.log(data)
         alert("succes")
-        this.inscriptionForm.reset()
+        this.enregistrerForm.reset()
 
       },
       (error) => {

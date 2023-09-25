@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { Atelier } from 'src/app/shared/models/atelier';
 import { AtelierService } from 'src/app/shared/services/atelier.service';
+import { FormGroup } from '@angular/forms';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-atelier-index',
@@ -10,13 +12,13 @@ import { AtelierService } from 'src/app/shared/services/atelier.service';
 export class AtelierIndexComponent implements OnInit{
 
   ateliers : Atelier[] | any;
+  items: MenuItem[] | undefined;
   constructor(private atelierService : AtelierService){}
 
   ngOnInit(): void {
     this.atelierService.getAllAtelier().subscribe((data)=>{
       this.ateliers = data;
       console.log("voici les donnees ",data)
-      alert(JSON.stringify(data))
     })
   }
 

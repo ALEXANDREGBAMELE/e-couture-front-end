@@ -1,11 +1,10 @@
-<div class="flex container">
+<div class="flex">
     <div class="side-bar">
-
         <div>
             <span class="logo">E-Couture</span>
         </div>
         <div class="card flex justify-content-center">
-            <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+            <p-panelMenu [model]="items" [style]="{'width':'200px', paddingTop:'15px'}"></p-panelMenu>
         </div>
     </div>
     
@@ -20,15 +19,3 @@
         </div>
     </div>
 </div>
-
-<!-- sidebar.component.html
- <p-sidebar [(visible)]="sidebarVisible" [showCloseIcon]="true" [blockScroll]="true">
-    <h2>Ma Sidebar</h2>
-    <ul>
-      <li><a routerLink="/accueil">Accueil</a></li>
-      <li><a routerLink="/profil">Profil</a></li>
-      <li><a routerLink="/parametres">Paramètres</a></li>
-    </ul>
-  </p-sidebar> 
-  
-  <button (click)="toggleSidebar()">Toggle Sidebar</button>-->
