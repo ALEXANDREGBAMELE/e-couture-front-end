@@ -6,25 +6,24 @@
             <div class="form-group">
                 <label for="image">Image :</label>
                 <input type="file" id="image" name="image" (change)="onFileSelected($event)" accept="image/*">
+                <img [src]="imgUrl" alt="" height="100" *ngIf="imgUrl" class="mt-5">
               </div>
-              
-                <img src="https://www.plans.fr/wp-content/uploads/2019/01/Access-avec-carport-vue-avant.jpg" alt="" height="100" class="mt-5">
               
         </div>
         <div class="right">
             <div class="flex flex-column gap-2">
-                <label htmlFor="nom_atelier">Nom atelier : </label>
-                <input class="p-inputtext-lg" pInputText id="nom_atelier" [style]="{height:'40px'}"
-                    formControlName="nom_atelier">
+                <label htmlFor="nomAtelier">Nom atelier : </label>
+                <input class="p-inputtext-lg" pInputText  [style]="{height:'40px'}"
+                    formControlName="nomAtelier">
 
                 <label htmlFor="adresse">Adresse : </label>
-                <input pInputText id="adresse" [style]="{height:'40px'}" formControlName="adresse" />
+                <input pInputText  [style]="{height:'40px'}" formControlName="adresse" />
 
                 <label htmlFor="ville">Ville : </label>
-                <input pInputText id="ville" [style]="{height:'40px'}" formControlName="ville" />
+                <input pInputText  [style]="{height:'40px'}" formControlName="ville" />
                 
-                <label htmlFor="description">Description : </label>
-                <textarea rows="5" cols="30" pInputTextarea formControlName="description"></textarea>
+                <label htmlFor="description_atelier">Description : </label>
+                <textarea rows="5" cols="30" pInputTextarea formControlName="descriptionAtelier"></textarea>
 
                 <div class="card flex justify-content-center">
                     <button pButton type="submit" icon="pi pi-check" iconPos="left" label="Enregistrer"></button>

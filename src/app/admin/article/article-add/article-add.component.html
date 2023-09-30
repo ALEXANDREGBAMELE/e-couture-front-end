@@ -1,7 +1,11 @@
 <p-card [style]="{ width: '500px' }" header="Enregistrement des articles" class="m-5">
     <form [formGroup]="enregistrerForm" (ngSubmit)="enregistrer()" class="flex pr-5">
         <div class="left">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed officia non minima iusto voluptates laudantium repudiandae perferendis, eaque ex ducimus, dolores suscipit aperiam soluta molestiae sint provident nihil doloremque et!
+            <div class="form-group">
+                <label for="image">Image :</label>
+                <input type="file" id="image" name="image" (change)="onFileSelected($event)" accept="image/*">
+                <img [src]="imgUrl" alt="" height="100" *ngIf="imgUrl" class="mt-5">
+              </div>
         </div>
         <div class="right">
             <div class="flex flex-column gap-2">

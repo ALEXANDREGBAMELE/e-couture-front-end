@@ -13,6 +13,11 @@ export class ArticleAddComponent implements OnInit {
   blockSpace: RegExp = /[^s]/;
   blockChars: RegExp = /^[^<>*!]+$/;
 
+  atelierFile: any;
+  imgUrl: any;
+  public imagePath: any;
+  public message!: string;
+
 
   constructor(private fb: FormBuilder, private articleService: ArticleService) { }
   enregistrerForm!: FormGroup;
@@ -49,7 +54,27 @@ export class ArticleAddComponent implements OnInit {
         // Vous pouvez afficher un message d'erreur à l'utilisateur ici
       }
     );
+  }
 
+  //Ctte methode permet d'uploader une image
+  onFileSelected(event: any) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.atelierFile = file;
+
+      var mineType = event.target.files[0].type
+      if (mineType.match(/image\/*/) == null) {
+        this.message = "ne supporte que les images";
+        return
+      }
+
+      var reader = new FileReader();
+      this.imagePath = file;
+      reader.readAsDataURL(file);
+      reader.onload = (_event) => {
+        this.imgUrl = reader.result;
+      }
+    }
   }
 }
 

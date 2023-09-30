@@ -6,12 +6,14 @@ import { CardsComponent } from './cards/cards.component';
 import { CardModule } from 'primeng/card';
 import { GrapheComponent } from './graphe/graphe.component';
 import { ChartModule } from 'primeng/chart';
+import { CircleComponent } from './circle/circle.component';
 
 
 @NgModule({
   declarations: [
     CardsComponent,
-    GrapheComponent
+    GrapheComponent,
+    CircleComponent
   ],
   imports: [
     CommonModule,

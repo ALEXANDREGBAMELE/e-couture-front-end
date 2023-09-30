@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-graphe',
-  templateUrl: './graphe.component.html',
-  styleUrls: ['./graphe.component.css']
+    selector: 'app-graphe',
+    templateUrl: './graphe.component.html',
+    styleUrls: ['./graphe.component.css']
 })
-export class GrapheComponent   {
+export class GrapheComponent {
     data: any;
-
     options: any;
 
     ngOnInit() {
@@ -15,21 +14,21 @@ export class GrapheComponent   {
         const textColor = documentStyle.getPropertyValue('--text-color');
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-        
+
         this.data = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
                 {
-                    label: 'My First dataset',
+                    label: 'Precommander',
                     backgroundColor: documentStyle.getPropertyValue('--blue-500'),
                     borderColor: documentStyle.getPropertyValue('--blue-500'),
-                    data: [65, 59, 80, 81, 56, 55, 40]
+                    data: [20, 25, 47, 18, 48, 90, 33]
                 },
                 {
-                    label: 'My Second dataset',
+                    label: 'Pret a porter',
                     backgroundColor: documentStyle.getPropertyValue('--pink-500'),
                     borderColor: documentStyle.getPropertyValue('--pink-500'),
-                    data: [28, 48, 40, 19, 86, 27, 90]
+                    data: [102, 87, 98, 56, 88, 77, 69]
                 }
             ]
         };

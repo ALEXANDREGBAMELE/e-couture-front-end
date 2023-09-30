@@ -1,7 +1,7 @@
 <div *ngFor="let user of users">
    
         <p-card
-            [style]="{'width':'150px', height:'150px', paddingTop:'15px', textAlign:'center', float:'left', margin:'5px'}"
+            [style]="{'width':'150px', height:'150px', paddingTop:'15px', textAlign:'center', float:'left', margin:'5px',justifyContent:'center'}"
             [ngStyle]="user.style" class="card">
             <div style="font-size: larger; font-weight:bold">{{ user.count }}</div>
             <div>
@@ -9,6 +9,9 @@
             </div>
     </p-card>
 </div>
-<div class="graphe" [style]="{border : 'solid 1px grey', backgroundColor : 'red'}">
-    <app-graphe></app-graphe>
+<div class="graphe flex gap-5">
+    <div class="graph1"><app-graphe></app-graphe></div>
+    <div class="graph1"><app-circle></app-circle></div>
+    
+    
 </div>

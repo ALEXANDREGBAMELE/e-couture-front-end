@@ -31,7 +31,7 @@ export class AtelierService {
 
 
   deleteAtelier(atelier_id : any) {
-    return this.httpService.delete(`/atelier/dele${atelier_id}`);
+    return this.httpService.delete(`/atelier/delete/${atelier_id}`);
   }
 
 }
