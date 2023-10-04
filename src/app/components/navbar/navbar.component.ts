@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
           },
           {
             label: 'BOUTIQUE',
-            routerLink : "/index/boutique",
+            routerLink : "/boutique",
           },
 
           {
@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
           {
             label: 'A PROPOS',
             // icon: 'pi pi-fw pi-power-off'
-            routerLink:'/index/apropos'
+            routerLink:'/apropos'
           },
 
         {
@@ -57,12 +57,12 @@ export class NavbarComponent implements OnInit {
             items: [
               {
                   label: 'CONNEXION',
-                  routerLink: "/index/connexion",
+                  routerLink: "/connexion",
 
               },
               {
                   label: 'INSCRIPTION',
-                  routerLink: "/index/inscription"
+                  routerLink: "/inscription"
               },
               {
                 label: 'PROFILE',

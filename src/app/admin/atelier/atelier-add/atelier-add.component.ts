@@ -1,4 +1,3 @@
-import { PropertyRead } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Atelier } from 'src/app/shared/models/atelier';
@@ -15,19 +14,13 @@ export class AtelierAddComponent implements OnInit {
   blockChars: RegExp = /^[^<>*!]+$/;
 
   selectedFile: File | null = null;
-  atelierFile: any;
   imgUrl: any;
   public imagePath: any;
   public message!: string;
 
-  // onFileSelected(event: any) {
-  //   this.selectedFile = event.target.files[0] as File;
-  // }
-
   constructor(private fb: FormBuilder, private atelierService: AtelierService) { }
   enregistrerAtelierForm!: FormGroup;
 
-  ateliers: Atelier = {}
   ngOnInit(): void {
     this.enregistrerAtelierForm = this.fb.group({
       nomAtelier: ["", [Validators.required]],
@@ -36,54 +29,65 @@ export class AtelierAddComponent implements OnInit {
       descriptionAtelier: ["", [Validators.required]],
       image: ["", [Validators.required]]
     });
-    console.log(this.enregistrerAtelierForm.value)
   }
 
-
-
   enregistrer() {
+    
+    // if (this.enregistrerAtelierForm.invalid) {
+    //   // Gérer le cas où le formulaire est invalide (champs manquants, etc.)
+    //   console.log('les champs sont invalident')
+    //   return;
+    // }
+
+    // Créez un objet FormData
+    // const formData = new FormData();
+
+    // // Ajoutez les champs du formulaire à formData
+    // for (const [key, value] of Object.entries(this.enregistrerAtelierForm.value)) {
+    //   if (key === 'image' && value instanceof File) {
+    //     // Si la clé est 'image' et que la valeur est une instance de File
+    //     formData.append(key, value, value.name); // Utilisez la surcharge de FormData pour le champ de fichier
+    //   } else {
+    //     formData.append(key, value as string);
+    //   }
+    // }
+    
+    // Ajoutez l'image téléchargée à formData
+    // if (this.selectedFile) {
+    //   formData.append('image', this.selectedFile);
+    // }
+
     this.atelierService.createAtelier(this.enregistrerAtelierForm.value).subscribe(
       (data: Atelier) => {
         // Traitement réussi
-        this.ateliers = data;
-        console.log(data)
-        alert("succes")
-        this.enregistrerAtelierForm.reset()
-
+        console.log(data);
+        this.enregistrerAtelierForm.reset();
+        this.selectedFile = null;
       },
       (error) => {
         // Gestion des erreurs
-        alert("erreur")
         console.error('Une erreur s\'est produite lors de la création de l\'Atelier : ', error);
         // Vous pouvez afficher un message d'erreur à l'utilisateur ici
       }
-      
     );
-    console.log(this.enregistrerAtelierForm.value)
   }
 
-  //Ctte methode permet d'uploader une image
   onFileSelected(event: any) {
     if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.atelierFile = file;
+      this.selectedFile = event.target.files[0];
 
-      var mineType = event.target.files[0].type
-      if (mineType.match(/image\/*/) == null) {
-        this.message = "ne supporte que les images";
-        return
+      var mineType = this.selectedFile!.type
+      if (!mineType.startsWith('image/')) {
+        this.message = "Ne supporte que les images";
+        return;
       }
 
       var reader = new FileReader();
-      this.imagePath = file;
-      reader.readAsDataURL(file);
+      this.imagePath = this.selectedFile;
+      reader.readAsDataURL(this.selectedFile!);
       reader.onload = (_event) => {
         this.imgUrl = reader.result;
       }
     }
-
-
-
-
   }
 }

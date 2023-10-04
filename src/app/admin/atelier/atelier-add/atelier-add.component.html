@@ -1,29 +1,25 @@
-
-
 <p-card [style]="{ width: '800px' }" header="Enregistrement Atelier" class="m-5">
-    <form [formGroup]="enregistrerAtelierForm" (ngSubmit)="enregistrer()" enctype="multipart/form-data" class="flex pr-5 gap-4">
+    <form [formGroup]="enregistrerAtelierForm" (ngSubmit)="enregistrer()" class="flex pr-5 gap-4" enctype="multipart/form-data">
         <div class="left">
             <div class="form-group">
                 <label for="image">Image :</label>
                 <input type="file" id="image" name="image" (change)="onFileSelected($event)" accept="image/*">
                 <img [src]="imgUrl" alt="" height="100" *ngIf="imgUrl" class="mt-5">
-              </div>
-              
+            </div>
         </div>
         <div class="right">
             <div class="flex flex-column gap-2">
-                <label htmlFor="nomAtelier">Nom atelier : </label>
-                <input class="p-inputtext-lg" pInputText  [style]="{height:'40px'}"
-                    formControlName="nomAtelier">
+                <label for="nomAtelier">Nom atelier :</label>
+                <input pInputText [style]="{ height: '40px' }" formControlName="nomAtelier" id="nomAtelier">
 
-                <label htmlFor="adresse">Adresse : </label>
-                <input pInputText  [style]="{height:'40px'}" formControlName="adresse" />
+                <label for="adresse">Adresse :</label>
+                <input pInputText [style]="{ height: '40px' }" formControlName="adresse" id="adresse">
 
-                <label htmlFor="ville">Ville : </label>
-                <input pInputText  [style]="{height:'40px'}" formControlName="ville" />
-                
-                <label htmlFor="description_atelier">Description : </label>
-                <textarea rows="5" cols="30" pInputTextarea formControlName="descriptionAtelier"></textarea>
+                <label for="ville">Ville :</label>
+                <input pInputText [style]="{ height: '40px' }" formControlName="ville" id="ville">
+
+                <label for="descriptionAtelier">Description :</label>
+                <textarea rows="5" cols="30" pInputTextarea formControlName="descriptionAtelier" id="descriptionAtelier"></textarea>
 
                 <div class="card flex justify-content-center">
                     <button pButton type="submit" icon="pi pi-check" iconPos="left" label="Enregistrer"></button>

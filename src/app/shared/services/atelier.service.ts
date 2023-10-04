@@ -21,8 +21,8 @@ export class AtelierService {
    return this.httpService.get(`/atelier/get`);
   }
 
-  createAtelier(atelier : Atelier): Observable<Object>{
-   return this.httpService.post({endpoint : '/atelier/add', data : atelier});
+  createAtelier(formData: FormData): Observable<Object>{
+   return this.httpService.post({endpoint : '/atelier/add', data : formData});
   }
 
   updateAtelier(atelier : Atelier) {

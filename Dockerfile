@@ -1,17 +1,14 @@
+#Stage 1
 # Utilisez une image de base Node.js pour la construction de l'application
 FROM node:20 AS build
-
 # Définir le répertoire de travail à l'intérieur du conteneur
 WORKDIR /app
-
 # Copier les fichiers de package.json et package-lock.json pour installer les dépendances
-COPY package*.json ./
-
-
-
+# COPY package*.json ./
 # Copier tous les fichiers de l'application vers le conteneur
 COPY . .
-
+# Installer les dependances
+RUN npm install
 # Construire l'application Angular
 RUN /bin/sh -c "npm install && npm run build"
 

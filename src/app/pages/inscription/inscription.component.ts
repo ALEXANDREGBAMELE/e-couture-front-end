@@ -9,12 +9,12 @@ import { User } from 'src/app/shared/models/user';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
-  
-  constructor( private fb: FormBuilder, private userService : UserService){}
+
+  constructor(private fb: FormBuilder, private userService: UserService) { }
   inscriptionForm!: FormGroup;
 
   titre: string = "ISCRIPTION";
-  users : User = {}
+  users: User = {}
   ngOnInit(): void {
 
     this.inscriptionForm = this.fb.group({
@@ -25,27 +25,24 @@ export class InscriptionComponent implements OnInit {
       password: ["", [Validators.required]],
       passwordConfirm: ["", [Validators.required]],
     });
-    // ...
+    // ...F
 
   }
 
   enregistrer() {
-   this.userService.createUser(this.inscriptionForm.value).subscribe(
-  (data: User) => {
-    // Traitement réussi
-    this.users = data;
-    console.log(data)
-    alert("succes")
-    this.inscriptionForm.reset()
+    this.userService.createUser(this.inscriptionForm.value).subscribe(
+      (data: User) => {
+        // Traitement réussi
+        this.users = data;
+        console.log(data)
+        this.inscriptionForm.reset()
 
-  },
-  (error) => {
-    // Gestion des erreurs
-    alert("erreur")
-    console.error('Une erreur s\'est produite lors de la création de l\'utilisateur : ', error);
-    // Vous pouvez afficher un message d'erreur à l'utilisateur ici
-  }
-);
-
+      },
+      (error) => {
+        // Gestion des erreurs
+        alert("erreur")
+        console.error('Une erreur s\'est produite lors de la création de l\'utilisateur : ', error);
+        // Vous pouvez afficher un message d'erreur à l'utilisateur ici
+      });
   }
 }

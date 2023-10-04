@@ -3,15 +3,7 @@
         <p-toolbar>
             <div class="p-toolbar-group-start">
                 <p-button [routerLink]="'/admin/atelier/add'" label="New" icon="pi pi-plus" class="mr-2"></p-button>
-                <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
-                <i class="p-toolbar-separator pi pi-bars mr-2" style="vertical-align: middle"></i>
-                <p-splitButton label="Save" icon="pi pi-check" [model]="items"
-                    styleClass="p-button-warning"></p-splitButton>
-            </div>
-            <div class="p-toolbar-group-end">
-                <p-button icon="pi pi-search" class="mr-2"></p-button>
-                <p-button icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
-                <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+
             </div>
         </p-toolbar>
     </div>
@@ -37,7 +29,8 @@
                 <th pSortableColumn="articleId">Id</th>
                 <th pSortableColumn=""> Image<p-sortIcon field="nomAtelier"></p-sortIcon></th>
                 <th pSortableColumn="nomAtelier">Nom Atelier <p-sortIcon field="nomAtelier"></p-sortIcon></th>
-                <th pSortableColumn="descriptionAtelier"> Description <p-sortIcon field="descriptionAtelier"></p-sortIcon></th>
+                <th pSortableColumn="descriptionAtelier"> Description <p-sortIcon
+                        field="descriptionAtelier"></p-sortIcon></th>
                 <th pSortableColumn="adresse">Adresse <p-sortIcon field="adresse"></p-sortIcon></th>
                 <th pSortableColumn="ville">Ville <p-sortIcon field="ville"></p-sortIcon></th>
                 <th pSortableColumn="couturier">Nom Couturier <p-sortIcon field="couturier"></p-sortIcon></th>
