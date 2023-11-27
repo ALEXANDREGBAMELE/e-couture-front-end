@@ -1,0 +1,32 @@
+.container{
+    padding: 2rem 1rem 2rem 1rem;
+    
+}
+
+.card{
+    border: grey solid 1px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card .card-body img{
+    width: 280px;
+    height: 300px;
+}
+.d-flex{
+    display: flex;
+    gap : 10px
+}
+.p{
+    margin-bottom: 25px;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.btn-plus{
+    background-color: rgb(67, 67, 250);
+    padding: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    
+}

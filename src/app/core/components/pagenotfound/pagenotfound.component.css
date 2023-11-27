@@ -1,0 +1,21 @@
+/* not-found-page.component.css */
+.not-found-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 120px;
+    color: #d9534f; /* Bootstrap's danger color */
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  

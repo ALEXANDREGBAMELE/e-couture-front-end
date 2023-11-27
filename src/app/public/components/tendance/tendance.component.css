@@ -1,0 +1,13 @@
+.card img {
+    height: 400px;
+    width: 300px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.gap-5{
+    gap: 50px;
+    justify-content: center;
+}
