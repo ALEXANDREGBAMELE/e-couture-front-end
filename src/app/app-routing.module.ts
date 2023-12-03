@@ -4,7 +4,12 @@ import { PagenotfoundComponent } from './core/components/pagenotfound/pagenotfou
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./public/public-routing.module').then(m => m.PublicRoutingModule),
+    loadChildren: () => import('./public/public.module').then(m => m.PublicModule),
+
+  },
+  {
+    path: 'protect',
+    loadChildren: () => import('./protected/protected.module').then(m => m.ProtectedModule),
 
   },
   {

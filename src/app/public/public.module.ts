@@ -12,7 +12,7 @@ import { ProcessComponent } from './components/process/process.component';
 import { TendanceComponent } from './components/tendance/tendance.component';
 import { TimelineModule } from 'primeng/timeline';
 import { ModeleArticleComponent } from './components/modele-article/modele-article.component';
-
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import { ModeleArticleComponent } from './components/modele-article/modele-artic
     CoreModule,
     ArticleModule,
     TimelineModule,
+    ButtonModule,
   ]
 })
 export class PublicModule { }

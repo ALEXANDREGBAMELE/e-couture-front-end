@@ -17,7 +17,6 @@ export class ModeleArticleComponent {
   }
 
   goToArticles(){
-    alert('hello')
     this.router.navigate(['/articles']);
   }
  }

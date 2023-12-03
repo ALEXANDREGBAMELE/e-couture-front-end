@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 
@@ -107,4 +107,12 @@ export class NavbarComponent implements OnInit {
   openPopup() {
     this.showPopup = !this.showPopup
   }
+
+  constructor( private router : Router){}
+  
+  goToHome(){
+    
+    this.router.navigate(['/']);
+  }
+
 }

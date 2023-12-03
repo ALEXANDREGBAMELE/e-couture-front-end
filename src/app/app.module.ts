@@ -32,6 +32,7 @@ import { ButtonModule } from 'primeng/button';
 import { ProtectedModule } from './protected/protected.module';
 import { PublicModule } from './public/public.module';
 import { AuthModule } from './auth/auth.module';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { AuthModule } from './auth/auth.module';
     PublicModule,
     CardModule,
     AuthModule,
+    ProgressSpinnerModule,
    
   ],
   providers: [ProduitService],
